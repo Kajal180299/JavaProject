@@ -1,22 +1,38 @@
 package JavaProject;
 
+import java.util.Scanner;
+
 public class Casting {
 	
 	
 		
 		public static void main (String []args) {
 			
-			byte b = 10;
-			int i = b;
-			byte c=(byte) i;
-			byte d = (byte)i;
-			byte x = 10;
-			byte y = 20;
-			byte sum = (byte) (x*y);
-			
-			System.out.println(sum);
-		}
-
+			{
+				int temp;
+				boolean isPrime = true;
+				Scanner scan = new Scanner(System .in);
+				System.out.println("Enter the number");
+				
+				int num = scan.nextInt();
+				scan.close();
+				for (int i = 2; i<=num/2; i++)
+						{
+						temp =num%i;
+						if(temp==0)
+							{
+							isPrime = false;
+							break;
+							}
+						}
+				if(isPrime)
+					System.out.println(num+ " is a prime number");
+				
+				else
+					
+					System.out.println(num+ " is not a prime number");
+					
+				}
 	
-
+		}
 }
